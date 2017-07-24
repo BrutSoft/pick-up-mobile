@@ -1,0 +1,41 @@
+<ion-view view-title="Pick Up">
+  <ion-content class="padding">
+    <form ng-submit="requestGame()" >
+      <div class="row">
+        <div class="offset-by-three six columns" >
+          <label for="dateInput">Time</label>
+          <select name="timeSelect" class="u-full-width" id="dateInput" ng-options="option.name for option in data.availableOptions track by option.id" ng-model="data.selectedOption">
+          </select>
+        </div>
+      </div> <!-- end of row  -->
+      <div class="row">
+        <div class="offset-by-three six columns">
+          <label for="sportInput">Sport</label>
+          <select class="u-full-width" id="sportInput" ng-model="$parent.sportInput" required>
+            <option value="soccer" >Soccer</option>
+            <option value="basketball" >Basketball</option>
+            <option value="baseball" >Baseball</option>
+            <option value="football" >Football</option>
+          </select>
+        </div>
+      </div> <!-- end of row  -->
+      <div class="row">
+        <div class="offset-by-three six columns">
+          <label for="exampleMessage">Phone Number</label>
+          <input
+            type="tel"
+            class="u-full-width"
+            placeholder="we'll text you soon when a game is available"
+            id="phone"
+            ng-model="$parent.smsNum"
+            required />
+          <input class="button-primary" type="submit" value="Submit">
+        </div>
+      </div> <!-- end of row  -->
+      <div class="row" ng-show="findingLocation">
+        <div class="offset-by-three six columns" >
+          <!-- <img src="../img/loading_balls.gif" height="60" width="80"> -->
+          <h4 class="u-full-width">Submitting Game Request...</h4>
+    </form>
+  </ion-content>
+</ion-view>

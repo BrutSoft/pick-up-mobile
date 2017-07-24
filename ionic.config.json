@@ -1,0 +1,9 @@
+{
+  "name": "pickUpMobile",
+  "app_id": "3f64707d",
+  "gulpfile": "./gulpfile.js",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}

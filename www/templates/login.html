@@ -1,0 +1,28 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+    <div class="offset-by-three six columns">
+      <h1>Login</h1>
+      <div ng-show="error" class="alert alert-danger">{{ errorMessage }}</div>
+      <form class="form" ng-submit="login()">
+        <div class="row">
+        <div class="offset-by-three six columns">
+          <label>Username</label>
+          <input type="text" class="u-full-width" id="loginUsername" name="username" ng-model="$parent.loginForm.username" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-by-three six columns">
+          <label>Password</label>
+        <input type="password" class="u-full-width" id="loginPassword" name="password" ng-model="$parent.loginForm.password" required>
+          </div>
+        </div>
+          <div>
+            <button type="submit" class="btn btn-default" ng-disabled="disabled">Login</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-default" ng-click="registerRoute()">Register</button>
+          </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

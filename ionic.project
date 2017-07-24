@@ -1,0 +1,10 @@
+{
+  "name": "pickUpMobile",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://pick-up-app.herokuapp.com/api/games"
+    }
+  ]
+}
